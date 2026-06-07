@@ -1,0 +1,62 @@
+package ejerciciosApuntes;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ActividadResuelta5_9 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		 
+		int[] puntuaciones = new int[5];
+		int input = 0;
+		
+		for(int i = 0; i < puntuaciones.length; i++) {
+			System.out.println("Introduce la puntuación del programador " + (i+1) + ": ");
+			System.out.print("  > "); puntuaciones[i] = sc.nextInt();
+		}
+		
+		System.out.println("Introduce las puntuaciones de los programadores de exhibición");
+		do {
+			System.out.print("  > "); input = sc.nextInt();
+			puntuaciones = introducirValor(input, puntuaciones);
+		} while(input > 0);
+		
+		
+		Arrays.sort(puntuaciones);
+		System.out.println("Resultados: " +Arrays.toString(puntuaciones));
+		
+	}
+	
+	public static int[] introducirValor(int valorAIntroducir, int[] arrayOriginal){
+		int inicio = 0;
+		int fin = arrayOriginal.length - 1;
+		int medio = 0;
+
+		while(inicio <= fin) {
+		    medio = (inicio + fin) / 2;
+		    if(valorAIntroducir > arrayOriginal[medio]) {
+		        inicio = medio + 1;
+		    } else {
+		        fin = medio - 1;
+		    }
+		}
+		int indiceInsercion = inicio;
+		
+		int[] arrayCopia = new int[arrayOriginal.length + 1];
+		
+		for(int i = 0; i < arrayOriginal.length; i++) {
+		    if(i < indiceInsercion) {
+		        arrayCopia[i] = arrayOriginal[i];
+		    } else {
+		        arrayCopia[i + 1] = arrayOriginal[i];
+		    }
+		}
+		
+		arrayCopia[indiceInsercion] = valorAIntroducir;
+		return arrayCopia;
+
+	}
+
+}

@@ -1,0 +1,124 @@
+package paquete;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class ProductoTest {
+
+	@Test
+	void testProducto() {
+		Producto p1 = new Producto("Manzana", 5, 10, "Fruta");
+		String nombre = p1.getNombre();
+		double precio = p1.getPrecio();
+		int stock = p1.getStock();
+		String categoria = p1.getCategoria();
+		assertEquals("Manzana", nombre);
+		assertEquals(5, precio);
+		assertEquals(10, stock);
+		assertEquals("Fruta", categoria);
+	}
+
+	@Test
+	void testGetNombre() {
+		Producto p1 = new Producto("Manzana", 5, 10, "Fruta");
+		String nombre = p1.getNombre();
+		assertEquals("Manzana", nombre);
+	}
+
+	@Test
+	void testSetNombre() {
+		Producto p1 = new Producto("Manzana", 5, 10, "Fruta");
+		p1.setNombre("Pera");
+		String nombre = p1.getNombre();
+		assertEquals("Pera", nombre);
+	}
+
+	@Test
+	void testGetPrecio() {
+		Producto p1 = new Producto("Manzana", 5, 10, "Fruta");
+		double precio = p1.getPrecio();
+		assertEquals(5, precio);
+	}
+
+	@Test
+	void testSetPrecio() {
+		Producto p1 = new Producto("Manzana", 5, 10, "Fruta");
+		p1.setPrecio(6);	
+		double precio = p1.getPrecio();
+		assertEquals(6, precio);
+	}
+
+	@Test
+	void testGetStock() {
+		Producto p1 = new Producto("Manzana", 5, 10, "Fruta");
+		int stock = p1.getStock();
+		assertEquals(10, stock);
+	}
+
+	@Test
+	void testSetStock() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetCategoria() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSetCategoria() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testIsActivo() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSetActivo() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testObtenerCodigoProducto() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testHayStock() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCalcularPrecioConIVA() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCalcularStockDespuesDeVenta() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testObtenerEstadoStock() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testNecesitaReposicion() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testObtenerMensajePromocion() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testToString() {
+		fail("Not yet implemented");
+	}
+
+}

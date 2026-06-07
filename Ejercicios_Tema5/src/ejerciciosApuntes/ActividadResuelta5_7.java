@@ -1,0 +1,44 @@
+package ejerciciosApuntes;
+
+import java.util.Arrays;
+
+public class ActividadResuelta5_7 {
+
+	public static void main(String[] args) {
+		
+		int[] array = {10, 10, 20, 25, 25, 30, 40, 55, 55, 55};
+		
+		int[] arraySinRepetidos = sinRepetidos(array);
+		
+		System.out.println("Array original: " +Arrays.toString(array));
+		System.out.println("Array sin repetidos: " +Arrays.toString(arraySinRepetidos));
+
+	}
+	
+	public static int[] sinRepetidos (int array[]) {
+		
+		int contador = 0;
+		for(int i = 0; i < array.length; i++) {
+		    boolean repetido = false;
+		    for(int j = 0; j < i; j++) {
+		        if(array[i] == array[j]) repetido = true;
+		    }
+		    if(!repetido) contador++; 
+		}
+		
+		int[] arrayNuevo = new int[contador];
+		
+		int pos = 0;
+		for(int i = 0; i < array.length; i++) {
+		    boolean repetido = false;
+		    for(int j = 0; j < i; j++) {
+		        if(array[i] == array[j]) repetido = true;
+		    }
+		    if(!repetido) arrayNuevo[pos++] = array[i];
+		}
+		
+		return arrayNuevo;
+		
+	}
+
+}

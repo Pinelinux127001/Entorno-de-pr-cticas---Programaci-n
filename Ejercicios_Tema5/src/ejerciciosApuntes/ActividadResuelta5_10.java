@@ -1,0 +1,40 @@
+package ejerciciosApuntes;
+
+import java.util.Arrays;
+
+public class ActividadResuelta5_10 {
+
+	public static void main(String[] args) {
+		
+
+		int[] arrayPrincipal = {23, 65, 76, 21, 45, 67, 98, 13};
+		int valor = 80;
+		
+		int[] arrayFinal = eliminarMayores(arrayPrincipal, valor);
+		
+		System.out.println(Arrays.toString(arrayFinal));
+		
+		
+	}
+	
+	public static int[] eliminarMayores(int[] arrayPrincipal, int valor) {
+		int contador  = 0;
+		
+		for(int i = 0; i < arrayPrincipal.length; i++) {
+			if (arrayPrincipal[i] <= valor) contador++;
+		}
+		
+		int[] arrayNuevo = new int[contador];
+		
+		int pos = 0;
+		for(int i = 0; i < arrayPrincipal.length; i++) {
+		    if(arrayPrincipal[i] <= valor) {
+		        arrayNuevo[pos++] = arrayPrincipal[i];
+		    }
+		}
+		
+		return arrayNuevo;
+		
+	}
+
+}

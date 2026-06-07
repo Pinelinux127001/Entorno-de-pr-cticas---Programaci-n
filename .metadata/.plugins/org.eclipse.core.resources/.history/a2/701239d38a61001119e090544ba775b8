@@ -1,0 +1,34 @@
+package ejerciciosApuntes;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ActividadPropuesta5_7 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int input = 0;
+		
+		System.out.println("---NUMERO DE LA SUERTE---");
+		System.out.println("Introduce la longitud del array: "); System.out.print("  > ");
+		input = sc.nextInt();
+		
+		int[] arrayPrincipal = new int[input];
+		
+		for(int i = 0; i < arrayPrincipal.length; i++) {
+			System.out.println("Introduce el valor " +(i+1)+ " del array: ");
+			System.out.print("  > "); input = sc.nextInt();
+			arrayPrincipal[i] = input;
+		}
+		
+		Arrays.sort(arrayPrincipal);
+		
+		
+		
+		
+				
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package ejerciciosApuntes;
+
+public class ActividadPropuesta5_6 {
+
+	public static void main(String[] args) {
+		
+		int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		int elemento = 7;
+		
+		int inicio = 0;
+		int fin = array.length - 1;
+		int indiceBorrado = -1;
+
+		while(inicio <= fin && indiceBorrado == -1) {
+		    int medio = (inicio + fin) / 2;
+		    if(array[medio] == elemento) {
+		        indiceBorrado = medio;
+		    } else if(elemento > array[medio]) {
+		        inicio = medio + 1;
+		    } else {
+		        fin = medio - 1;
+		    }
+		}
+
+	}
+
+}

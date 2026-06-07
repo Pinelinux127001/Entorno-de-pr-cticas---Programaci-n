@@ -1,0 +1,17 @@
+package ejerciciosApuntes;
+
+import java.util.Scanner;
+
+public class ActividadPropuesta5_7 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int input = 0;
+		
+		System.out.println("---NUMERO DE LA SUERTE---");
+		System.out.println("Introduce la longitud del array: "); System.out.print("  > ");
+
+	}
+
+}
